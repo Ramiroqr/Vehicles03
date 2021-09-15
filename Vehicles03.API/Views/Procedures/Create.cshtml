@@ -1,30 +1,31 @@
-﻿@model Vehicles03.API.Data.Entities.VehicleType
+﻿@model Vehicles03.API.Data.Entities.Procedure
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Create";
 }
 
-<h1>Editar</h1>
+<h1>Crear</h1>
 
-<h4>Tipo de vehiculo</h4>
+<h4>Procedimiento</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
 
-            <partial name="_VehicleType"/>
+            <partial name="_Procedure" />
 
             <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
                 <a asp-action="Index" class="btn btn-success">Regresar</a>
             </div>
         </form>
     </div>
 </div>
 
+<div>
 
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
